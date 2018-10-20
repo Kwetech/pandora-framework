@@ -13,7 +13,7 @@ Add suggestions or ideas here to improve *Pandora*
 **suggestion                        Suggester**
 
 
--hach cracker would be cool    -    mohammed
+-hash  cracker would be cool    -    mohammed
 
 # Installation
 
