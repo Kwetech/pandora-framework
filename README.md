@@ -10,7 +10,6 @@ Contributors are welcome whether you code in python or not,if you dont code in p
 
 ## Suggestions
 Add suggestions or ideas here to improve *Pandora*
-**suggestion                        Suggester**
 
 
 - hash  cracker would be cool    -    mohammed
