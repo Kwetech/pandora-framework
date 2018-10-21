@@ -4,17 +4,18 @@ import time
 
 #main port checking function
 def port_checker():
+    using = "\33[91;1musing\33[00m(\33[92;1mport_checker\33[00m) "
     count = 5
     ip = ''
     #getting host as input
-    host = raw_input("host<( ")
+    host = raw_input(using + "host<( ")
     try:
         #getting ip of host
         ip = socket.gethostbyname(host)
         while True:
             sockt = socket.socket()
             #getting port as input
-            port = raw_input("port<( ")
+            port = raw_input(using + "port<( ")
             if port == 'exit':
                 print 'exiting... '
                 time.sleep(1)

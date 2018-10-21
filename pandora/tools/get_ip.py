@@ -4,7 +4,8 @@ import socket
 
 #function to check ip
 def get_ip():
-    host = raw_input("host<( ")
+    using = "\33[91;1musing\33[00m(\33[92;1mip\33[00m) "
+    host = raw_input(using + "host<( ")
     #checking validity of host
     try:
         ip = socket.gethostbyname(host)

@@ -2,7 +2,8 @@ import sys
 import socket
 
 def whois():
-    host = raw_input("host<( ")
+    using = "\33[91;1musing\33[00m(\33[92;1mwhois\33[00m) "
+    host = raw_input(using + "host<( ")
     try:
         ip = socket.gethostbyname(host)
         sockt = socket.socket()

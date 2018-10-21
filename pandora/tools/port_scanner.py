@@ -5,12 +5,13 @@ from datetime import datetime
 import time
 
 def port_scanner():
+    using = "\33[91;1musing\33[00m(\33[92;1mport_scanner\33[00m) "
     try:
-        host = raw_input('host<( ')
+        host = raw_input(using + 'host<( ')
 
         tm1 = datetime.now()
-        s_port = raw_input('start_port<( ')
-        e_port = raw_input('end_port<( ')
+        s_port = raw_input(using + 'start_port<( ')
+        e_port = raw_input(using + 'end_port<( ')
 
         ip = socket.gethostbyname(host)
         for port in range(int(s_port) ,int(e_port)+1):  

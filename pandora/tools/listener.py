@@ -3,9 +3,10 @@ import sys
 from time import sleep
 
 def listener():
+    using = "\33[91;1musing\33[00m(\33[92;1mlistener\33[00m) "
     try:
-        host = raw_input("ip<( ")
-        port = input("port<( ")
+        host = raw_input(using + "ip<( ")
+        port = input(using + "port<( ")
         import socket
         import sys
         from time import sleep

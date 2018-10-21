@@ -1,21 +1,27 @@
 def help():
     print '''
 
-Commands                    Discriptions
+Tool                       Discriptions
 +-----------------------------------------+
 whois             -+-      get info of domain
-portcheck         -+-      checking ports in singles
+port_checker      -+-      checking ports in singles
 ip                -+-      retrieve ipaddress of host
-clone             -+-      used to clone webpages
+page_clonner      -+-      used to clone webpages
 ddos              -+-      performs a ddos attacks
-portscan          -+-      checks open ports in range
+port_scanner      -+-      checks open ports in range
 listener          -+-      listen for connections
+
+Usage: use <tool>
+
+command                    Description
++-----------------------------------------+
+use               -+-      To use a tool
+exit              -+-      to exit an activity
 
 
 other commands
 +-----------------------------------------+
 clear        -     clear screen
-exit         -     to exit an activity
 version      -     to check Pandora version
 banner       -     display a banner
     '''
