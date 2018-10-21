@@ -32,7 +32,7 @@ chmod +x *
 
 ls
 ```
-You will will see two executive files **_pandogen_** and **_pandora_**.Run the program by typing:
+You will will see two executive files **_Pandogen_** and **_Pandora_**.Run the program by typing:
 ```
 ./pandora
 
