@@ -34,7 +34,7 @@ ls
 ```
 You will will see two executive files **_Pandogen_** and **_Pandora_**.Run the program by typing:
 ```
-./pandora
+./Pandora
 
 ```
 Congratulation you are using pandora.
