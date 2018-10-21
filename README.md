@@ -13,7 +13,7 @@ Add suggestions or ideas here to improve *Pandora*
 **suggestion                        Suggester**
 
 
--hash  cracker would be cool    -    mohammed
+- hash  cracker would be cool    -    mohammed
 
 # Installation
 
@@ -33,7 +33,7 @@ chmod +x *
 
 ls
 ```
-You will will see two executive files **_pandogen_** and **_pandora_**.Run the program by typing:
+You will will see two executive files **_Pandogen_** and **_Pandora_**.Run the program by typing:
 ```
 ./Pandora
 
