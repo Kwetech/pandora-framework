@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 from tools.banner import *
 from tools.ddos import *
 from tools.get_ip import *
