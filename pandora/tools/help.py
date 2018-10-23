@@ -1,15 +1,16 @@
 def help():
     print '''
 
-Tool                       Discriptions
+Tool                      Discriptions
 +-----------------------------------------+
-whois             -+-      get info of domain
-port_checker      -+-      checking ports in singles
-ip                -+-      retrieve ipaddress of host
-page_clonner      -+-      used to clone webpages
-ddos              -+-      performs a ddos attacks
-port_scanner      -+-      checks open ports in range
-listener          -+-      listen for connections
+whois             -+-     get info of domain
+port_checker      -+-     checking ports in singles
+ip                -+-     retrieve ipaddress of host
+page_clonner      -+-     used to clone webpages
+ddos              -+-     performs a ddos attacks
+port_scanner      -+-     checks open ports in range
+listener          -+-     listen for connections
+subdomain_finder  -+-     find subdomains of a domain
 
 Usage: use <tool>
 
