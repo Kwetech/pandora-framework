@@ -28,6 +28,8 @@ cd Pandora-Framework
 
 chmod +x *
 
+pip2 install -r requirements.txt
+
 ./install.py
 
 ls
