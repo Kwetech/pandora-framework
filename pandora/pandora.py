@@ -1,6 +1,5 @@
 #!/usr/bin/env python2
 from tools.banner import *
-from tools.ddos.ddos import *
 from tools.get_ip import *
 from tools.help import *
 from tools.listener import *
@@ -18,10 +17,8 @@ while True:
         pan = pan.split()
         
         if pan[0] == 'use':
-            if pan[1] == 'ddos':
-                ddos()
 
-            elif pan[1] == 'ip':
+            if pan[1] == 'ip':
                 get_ip()
 
             elif pan[1] == 'listener':
