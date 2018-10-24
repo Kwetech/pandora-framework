@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 from tools.banner import *
-from tools.ddos import *
+from tools.ddos.ddos import *
 from tools.get_ip import *
 from tools.help import *
 from tools.listener import *
