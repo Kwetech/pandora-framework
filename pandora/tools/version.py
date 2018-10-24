@@ -1,2 +1,2 @@
 def version():
-    print 'Pandora version <(pvr 0.1.2)>'
+    print 'Pandora version <(v1.2-beta)>'
