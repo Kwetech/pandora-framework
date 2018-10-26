@@ -32,7 +32,8 @@ cd Pandora-Framework
 
 chmod +x *
 
-pip2 install -r requirements.txt
+#no need to execute requirements.txt
+#they will be installed in the installation process
 
 ./install.py
 
