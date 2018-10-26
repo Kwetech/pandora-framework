@@ -15,6 +15,12 @@ def recieve():
 		args = os.getcwd()
 	    except:
 	        args = 'directory change error'
+
+	elif recieve == 'system':
+	    args = platform.system()
+
+	elif recieve == 'os name':
+	    args = os.name()
 	
 	elif recieve == 'dir':
 	    args = os.getcwd()
