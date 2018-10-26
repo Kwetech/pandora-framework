@@ -1,6 +1,6 @@
 # The Pandora-Framework
 
-This is a framework which consist of various tools needed in **Penetrating Testing**.This tool is simple to use and user friend which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command to achieve a target.It based on the concept of exploitation and digital forensics,and research.
+This is a framework which consist of various tools needed in **Penetrating Testing**.This tool is simple to use and user friend which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command to achieve a target.It based on the concept of exploitation, digital forensics,and research.
 # Screenshot
  ![Screenshot](screenshot.png)
  _The world simplest yet powerful tool_

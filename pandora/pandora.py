@@ -60,7 +60,7 @@ while True:
         elif 'version' in pan:
             version()
         else:
-            '\33[91;1m[?]Unknown command\33[00m'
+            print '\33[91;1m[?]Unknown command\33[00m'
 
     except:
         pass
