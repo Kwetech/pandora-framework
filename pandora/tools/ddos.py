@@ -5,7 +5,7 @@ import sys
 import threading
 import time
 
-# Parse inputs
+
 host = ""
 ip = ""
 port = 0
