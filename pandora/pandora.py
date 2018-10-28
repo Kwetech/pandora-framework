@@ -9,6 +9,7 @@ from tools.port_scanner import *
 from tools.version import *
 from tools.whois import *
 from tools.subdomain_finder import *
+from tools.ddos import *
 
 main_banner()
 while True:
@@ -38,6 +39,9 @@ while True:
 
             elif pan[1] == 'subdomain_finder':
                 subdomains()
+
+            elif pan[1] == 'ddos':
+                ddos()
             
             else:
                 print '\33[91;1m[-]invalid argument for command\33[00m(\33[92;1muse\33[00m).'
