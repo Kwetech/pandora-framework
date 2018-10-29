@@ -11,6 +11,8 @@ port_scanner      -+-     checks open ports in range
 listener          -+-     listen for connections
 subdomain_finder  -+-     find subdomains of a domain
 ddos              -+-     ddos a website
+hasher            -+-     encrypt and crack hash pass
+
 
 Usage: use <tool>
 

@@ -12,7 +12,7 @@ def decrypt():
     password2.txt
     password3.txt
     password4.txt
-    password5.txt
+    password5.txt (Recommended)
     password6.txt
     allnames.txt
     keypass.txt
@@ -20,12 +20,13 @@ def decrypt():
     fnames.txt
     '''
     filename = raw_input(using + '\33[94;1mdecrypt\33[00m ' + 'filename<( ')
+    di = 'passfold/'
 
     try:
-        contents = open(filename, 'r')
+        contents = open(di + filename, 'r')
     except:
         print '\33[91;1m[-]file not found\33[00m'
-        quit()
+        sys.exit()
 
     for password in contents :
         filemd5 = md5.new(password.strip()).hexdigest()
