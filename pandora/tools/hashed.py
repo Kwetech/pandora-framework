@@ -30,7 +30,7 @@ def decrypt():
 
     for password in contents :
         filemd5 = md5.new(password.strip()).hexdigest()
-        print('trying password (\33[92;1m{}\33[00m)) from (\33[92;1m{}\33[00m)'.format(password.strip(), filename)
+        print('trying password (\33[92;1m{}\33[00m)) from (\33[92;1m{}\33[00m)'.format(password.strip(), filename))
         counter += 1
 
         if hashtext == filemd5:

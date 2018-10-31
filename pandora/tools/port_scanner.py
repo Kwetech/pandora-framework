@@ -29,4 +29,4 @@ def port_scanner():
 
     tmcmp  =  tm2 - tm1
 
-    print('Scanning completed in: ', tmcmp)
+    print('Scanning completed in: '+str( tmcmp))
