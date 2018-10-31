@@ -1,5 +1,5 @@
 def help():
-    print '''
+    print('''
 
 Tool                      Discriptions
 +-----------------------------------------+
@@ -27,5 +27,5 @@ other commands
 clear        -     clear screen
 version      -     to check Pandora version
 banner       -     display a banner
-    '''
+    ''')
     

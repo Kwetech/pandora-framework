@@ -21,12 +21,12 @@ def port_scanner():
                  print "Port {}    =>    \33[92;1mOpen\33[00m".format(port)
                  sockt.close()
     except:
-        print '[-]Error occured'
-        print 'exiting.... '
+        print('[-]Error occured')
+        print('exiting.... ')
         time.sleep(1)
 
     tm2 = datetime.now()
 
     tmcmp  =  tm2 - tm1
 
-    print 'Scanning completed in: ', tmcmp
+    print('Scanning completed in: ', tmcmp)

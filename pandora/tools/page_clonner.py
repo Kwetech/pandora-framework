@@ -13,11 +13,11 @@ def clone_page(url):
         urli = 'http://' + url
     try:
         #try to read url or page
-        print 'clonning into (\33[94;1m{}\33[00m)'.format(urli)
+        print('clonning into (\33[94;1m{}\33[00m)'.format(urli))
         cont = urllib.urlopen(urli).read()
         return cont
     except:
-        print '\33[91;1m[-]Error could not find page\33[00m'
+        print('\33[91;1m[-]Error could not find page\33[00m')
         return 0
 
 
@@ -36,7 +36,7 @@ def save_file(contents, file_name):
         f = open(di+'/saves/'+file_name,'w+')
     
         f.write(contents)
-        print '\33[92;1m[+]page successfully saved\33[00m'
+        print('\33[92;1m[+]page successfully saved\33[00m')
     else:
         pass
 

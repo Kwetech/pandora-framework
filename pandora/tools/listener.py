@@ -21,12 +21,12 @@ def socketCreate():
 
 def socketBind():
     try:
-        print 'Listening on port ' + str(port)
+        print('Listening on port ' + str(port))
         s.bind((host,port))
         s.listen(1)
     except:
         print('binding error')
-        print 'trying'
+        print('trying')
         socketBind()
 
 def socketAccept():
@@ -36,10 +36,10 @@ def socketAccept():
 
     try:
         conn, addr = s.accept()
-        print '[*] Sessions Opened | ' + 'IP :\33[92;1m ' + addr[0] + '\33[00m | Port : \33[92;1m' + str(addr[1])+'\33[00m\n'
+        print('[*] Sessions Opened | ' + 'IP :\33[92;1m ' + addr[0] + '\33[00m | Port : \33[92;1m' + str(addr[1])+'\33[00m\n')
         
     except:
-        print 'accepting error '
+        print('accepting error ')
 
 def menu():
     while True:

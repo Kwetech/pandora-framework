@@ -18,8 +18,8 @@ def whois():
                 break
         sockt.close()
 
-        print '\t   +------------Details---------------+'
-        print response
+        print('\t   +------------Details---------------+')
+        print(response)
     except:
-        print 'Error ocurred'
+        print('Error ocurred')
 

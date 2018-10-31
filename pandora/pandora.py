@@ -48,11 +48,11 @@ while True:
                 hasher()
             
             else:
-                print '\33[91;1m[-]invalid argument for command\33[00m(\33[92;1muse\33[00m).'
+                print('\33[91;1m[-]invalid argument for command\33[00m(\33[92;1muse\33[00m).')
 
 
         elif 'exit' in pan:
-            print 'Exiting.... '
+            print('Exiting.... ')
             time.sleep(1.5)
             break
         
@@ -68,7 +68,7 @@ while True:
         elif 'version' in pan:
             version()
         else:
-            print '\33[91;1m[?]Unknown command\33[00m (\33[92;1m{}\33[00m)'.format(' '.join(pan))
+            print('\33[91;1m[?]Unknown command\33[00m (\33[92;1m{}\33[00m)'.format(' '.join(pan)))
 
     except:
         pass
