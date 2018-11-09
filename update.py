@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 import time
-os.system("cd ..;rm -rf Pandora-Framework;git clone https://github.com/OxfordSecurity/Pandora-Framework.git")
+os.system("cd ..;rm -rf pandora-framework;git clone https://github.com/OxfordSecurity/pandora-framework.git")
 
 print("Latest \33[92;1mPandora \33[00mcloned")
 time.sleep(2)
