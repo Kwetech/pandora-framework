@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 from tools.banner import *
 from tools.get_ip import *
 from tools.help import *
@@ -15,7 +15,7 @@ from tools.hashed import *
 main_banner()
 while True:
     try:
-        pan = raw_input('\33[1mpan<( ')
+        pan = input('\33[1mpan<( ')
         pan = pan.split()
         
         if pan[0] == 'use':

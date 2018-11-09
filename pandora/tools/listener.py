@@ -10,8 +10,8 @@ def socketCreate():
 
         s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         using = '\33[91;1musing\33[00m(\33[92;1mlistener\33[00m) '
-        host = raw_input(using + 'host<( ')
-        port = raw_input(using + 'port<( ')
+        host = input(using + 'host<( ')
+        port = input(using + 'port<( ')
         if port == '':
             socketCreate()
         port = int(port)
@@ -43,7 +43,7 @@ def socketAccept():
 
 def menu():
     while True:
-        cmd = raw_input('meterpreter( ')
+        cmd = input('meterpreter( ')
         if cmd == 'quit':
             conn.close()
             sys.exit()

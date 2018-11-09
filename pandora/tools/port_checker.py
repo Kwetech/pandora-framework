@@ -8,14 +8,14 @@ def port_checker():
     count = 5
     ip = ''
     #getting host as input
-    host = raw_input(using + "host<( ")
+    host = input(using + "host<( ")
     try:
         #getting ip of host
         ip = socket.gethostbyname(host)
         while True:
             sockt = socket.socket()
             #getting port as input
-            port = raw_input(using + "port<( ")
+            port = input(using + "port<( ")
             if port == 'exit':
                 print('exiting... ')
                 time.sleep(1)

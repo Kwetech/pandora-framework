@@ -23,12 +23,12 @@ Add suggestions or ideas here to improve *Pandora*
 clone the repository from github:
 
 ```
-git clone https://github.com/OxfordSecurity/Pandora-Framework.git
+git clone https://github.com/OxfordSecurity/pandora-framework.git
 ```
 
 After that **Follow the following commands one by one**
 ```
-cd Pandora-Framework
+cd pandora-framework
 
 chmod +x *
 

