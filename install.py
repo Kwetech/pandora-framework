@@ -9,8 +9,8 @@ di = os.getcwd()
 
 os.system('chmod +x ' + di + '/pandora/pandogen.py')
 os.system('chmod +x ' + di + '/pandora/pandora.py')
-os.system('ln -s ~/Pandora-Framework/pandora/pandora.py Pandora')
-os.system('ln -s ~/Pandora-Framework/pandora/pandogen.py Pandogen')
+os.system('ln -s ~/pandora-framework/pandora/pandora.py Pandora')
+os.system('ln -s ~/pandora-framework/pandora/pandogen.py Pandogen')
 
 print '\33[92;1mInstalling neccessary packages\33[00m'
 os.system('pkg update')
