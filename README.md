@@ -1,34 +1,33 @@
-# The Pandora-Framework
+# The Pandora Framework
 
-This is a framework which consist of various tools needed in **Penetrating Testing**.This tool is simple to use and user friend which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command to achieve a target.
+This is a framework basically for **Turmux** which consist of various tools needed in **Penetrating Testing**.This framework is simple to use and user friend which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command.
 # Screenshot
  ![Screenshot](screenshot.png)
- _The world simpliest yet powerful tool_
+ _The world simplest yet powerful tool_
 
 ## Goal
-Pandora developers seek to make this tool a very powerful tool for penetrating testing.
+Pandora developers seek to make this tool a very powerful tool for penetrating testing.And to make it available for multiple platform.It works on termux.Tell us if it works on other platforms too,and if it do not,tell us the errors.
 
 ## Message to contributors
-Contributors are welcome whether you code in python or not,if you dont code in python you can always share ideas or suggestion.
+Contributors are welcome whether you code in python or not,if you don't code in python you can always share ideas or suggestion.
  And all contributors must join the whatsapp group chat to discuss the project.[whatsapp chat](https://chat.whatsapp.com/HseBYZRyFKR4or9cAg2zC8)
 
 ## Suggestions
 Add suggestions or ideas here to improve *Pandora*
 
 
-- hash  cracker would be cool    -    mohammed
 
 # Installation
 
 clone the repository from github:
 
 ```
-git clone https://github.com/OxfordSecurity/Pandora-Framework.git
+git clone https://github.com/OxfordSecurity/pandora-framework.git
 ```
 
 After that **Follow the following commands one by one**
 ```
-cd Pandora-Framework
+cd pandora-framework
 
 chmod +x *
 

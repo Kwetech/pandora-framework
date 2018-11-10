@@ -10,6 +10,7 @@ page_clonner      -+-     used to clone webpages
 port_scanner      -+-     checks open ports in range
 listener          -+-     listen for connections
 subdomain_finder  -+-     find subdomains of a domain
+ddos              -+-     perform a ddos attack
 
 Usage: use <tool>
 
