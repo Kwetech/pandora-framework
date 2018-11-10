@@ -13,4 +13,4 @@ def connect():
     port = $2
 
 " > $3
-cat ~/Pandora-Framework/pandora/modules/payload >> $3
+cat ~/pandora-framework/pandora/modules/payload >> $3

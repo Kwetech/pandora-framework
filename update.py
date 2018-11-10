@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 import os
 import time
 os.system("cd ..;rm -rf pandora-framework;git clone https://github.com/OxfordSecurity/pandora-framework.git")
