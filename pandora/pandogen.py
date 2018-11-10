@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 import os, sys, subprocess
 from time import sleep
 
@@ -21,7 +21,7 @@ try:
     if len(sys.argv) < 3:
         help()
     else:
-        print("\n[+] HOST   : %s\n[+] PORT   : %s\n[+] OUTPUT : %s\n"%(host, port,output+add))
+        print "\n[+] HOST   : %s\n[+] PORT   : %s\n[+] OUTPUT : %s\n"%(host, port,output+add)
         print("\33[94;1m[+] Generating Payload . . .\33[00m")
         sleep(3)
         os.system("sh ~/Pandora-Framework/pandora/modules/gen.sh "+host+" "+str(port)+" "+output+add)
@@ -29,5 +29,5 @@ try:
         print("\33[92;1m[+]payload Generating Success . . .\33[00m")
         sleep(1)
 except:
-    print("\33[91;1m[-]Payload could not be generated\33[00m")
+    print "\33[91;1m[-]Payload could not be generated\33[00m"
     help()

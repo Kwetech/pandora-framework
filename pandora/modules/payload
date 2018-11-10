@@ -14,27 +14,7 @@ def recieve():
 	        os.chdir(recieve[3:])
 		args = os.getcwd()
 	    except:
-	        args = 'directory changing error'
-
-	elif recieve == 'system':
-	    args = platform.system()
-
-	elif recieve[0:5] == 'mkdir':
-	    try:
-                os.system(recieve +' && pwd\n')
-		args = 'directory creation success'
-	    except:
-	        args = 'cant create a directory'
-
-	elif recieve == 'os_name':
-	    args = os.name
-
-	elif 'rm -rf' in recieve:
-	    try:
-	        os.system(recieve + ' && pwd\n')
-		args = 'remove successful'
-	    except:
-	        args = 'remove unsuccessful'
+	        args = 'directory change error'
 	
 	elif recieve == 'dir':
 	    args = os.getcwd()

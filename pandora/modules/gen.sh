@@ -2,7 +2,6 @@ echo "
 import socket
 import os
 import subprocess
-import platform
 
 def connect():
     os.system('clear')

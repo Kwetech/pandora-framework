@@ -1,5 +1,5 @@
 def help():
-    print('''
+    print '''
 
 Tool                      Discriptions
 +-----------------------------------------+
@@ -10,9 +10,6 @@ page_clonner      -+-     used to clone webpages
 port_scanner      -+-     checks open ports in range
 listener          -+-     listen for connections
 subdomain_finder  -+-     find subdomains of a domain
-ddos              -+-     ddos a website
-hasher            -+-     encrypt and crack hash pass
-
 
 Usage: use <tool>
 
@@ -27,5 +24,5 @@ other commands
 clear        -     clear screen
 version      -     to check Pandora version
 banner       -     display a banner
-    ''')
+    '''
     

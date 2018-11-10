@@ -8,7 +8,7 @@ results = {}
 
 def subdomains():
     using = '\33[91;1musing\33[00m(\33[92;1msubdomain_finder\33[0m) '
-    host = input(using + 'host<( ')
+    host = raw_input(using + 'host<( ')
     response = get('https://findsubdomains.com/subdomains-of/' + get_fld(host, fix_protocol=True)).text
     parts = response.split('data-row')
     for part in parts:

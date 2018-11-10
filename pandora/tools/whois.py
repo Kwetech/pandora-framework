@@ -3,7 +3,7 @@ import socket
 
 def whois():
     using = "\33[91;1musing\33[00m(\33[92;1mwhois\33[00m) "
-    host = input(using + "host<( ")
+    host = raw_input(using + "host<( ")
     try:
         ip = socket.gethostbyname(host)
         sockt = socket.socket()
@@ -18,8 +18,8 @@ def whois():
                 break
         sockt.close()
 
-        print('\t   +------------Details---------------+')
-        print(response)
+        print '\t   +------------Details---------------+'
+        print response
     except:
-        print('Error ocurred')
+        print 'Error ocurred'
 

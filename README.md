@@ -1,9 +1,9 @@
 # The Pandora-Framework
 
-This is a framework basically for termux which consist of various tools needed in **Penetrating Testing**.This tool is simple to use and user friendly which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command to achieve a target.It based on the concept of exploitation, digital forensics,and research.
+This is a framework which consist of various tools needed in **Penetrating Testing**.This tool is simple to use and user friend which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command to achieve a target.
 # Screenshot
  ![Screenshot](screenshot.png)
- _The world simplest yet powerful tool_
+ _The world simpliest yet powerful tool_
 
 ## Goal
 Pandora developers seek to make this tool a very powerful tool for penetrating testing.
@@ -23,17 +23,16 @@ Add suggestions or ideas here to improve *Pandora*
 clone the repository from github:
 
 ```
-git clone https://github.com/OxfordSecurity/pandora-framework.git
+git clone https://github.com/OxfordSecurity/Pandora-Framework.git
 ```
 
 After that **Follow the following commands one by one**
 ```
-cd pandora-framework
+cd Pandora-Framework
 
 chmod +x *
 
-#no need to execute requirements.txt
-#they will be installed in the installation process
+pip2 install -r requirements.txt
 
 ./install.py
 

@@ -44,20 +44,12 @@ ban2 = """\33[94;1m
     +-----------------------------------------+
   \33[00m
 """
-ban3 = """
-    +-----------------------------------------+
-    |\33[92;1m A  C  C  E  S  S    G  R  A  N  T  E  D\33[00m |
-    +-----------------------------------------+
-    \33[91;1m\t    P   A   N   D   O   R   A
-    Simple to use penetrating testing framework\33[00m
-"""
 
 import random
 def banner():
-    banners = (main_ban, ban1, ban2, ban3)
+    banners = (main_ban, ban1,ban2)
     choice = random.choice(banners)
     print(choice)
 
 def main_banner():
     print(main_ban)
-
