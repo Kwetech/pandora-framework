@@ -1,33 +1,39 @@
 #!/usr/bin/env python2
 import os, sys, subprocess
 from time import sleep
+from optparse import OptionParser
+parser = OptionParser(usage="./Pandogen --host=thost --port=tport --path=destination\n")
 
-def help():
-    print """
-    Usage:
-         python pandogen.py <ip> <port> <path>
-    """
-try:
-    host = sys.argv[1]
-    port = sys.argv[2]
-    output = sys.argv[3]
-    add = ''
-    if output.endswith('.py'):
-        add = ''
-    elif output.endswith('/'):
-        add = 'payload.py'
-    else:
-        add = ''
-    if len(sys.argv) < 3:
-        help()
-    else:
-        print "\n[+] HOST   : %s\n[+] PORT   : %s\n[+] OUTPUT : %s\n"%(host, port,output+add)
-        print("\33[94;1m[+] Generating Payload . . .\33[00m")
-        sleep(3)
-        os.system("sh ~/pandora-framework/pandora/modules/gen.sh "+host+" "+str(port)+" "+output+add)
+parser.add_option("--host", type="string", dest="tghost", help="Specify target host")
 
-        print("\33[92;1m[+]payload Generating Success . . .\33[00m")
-        sleep(1)
-except:
-    print "\33[91;1m[-]Payload could not be generated\33[00m"
-    help()
+parser.add_option("--port", type="int", dest="tgport", help="Specify target port")
+
+parser.add_option("--path", type="string", dest="path", help="Specify payload destination")
+
+(options, args) = parser.parse_args()
+
+host = options.tghost
+port = options.tgport
+output = str(options.path)
+
+add = ''
+if not output.endswith(".py"):
+    if output.endswith("/"):
+        add = "payload.py"
+    else:
+        add = "/payload.py"
+
+
+
+if host == None or port == None or output == None:
+
+    print parser.print_help()
+
+else:
+    print "\n[+] HOST   : %s\n[+] PORT   : %s\n[+] OUTPUT : %s\n"%(host, port,output+add)
+    print("\33[94;1m[+] Generating Payload . . .\33[00m")
+    sleep(3)
+    os.system("sh ~/pandora-framework/pandora/modules/gen.sh "+host+" "+str(port)+" "+output+add)
+
+    print("\33[92;1m[+]payload Generating Success . . .\33[00m")
+    sleep(1)
