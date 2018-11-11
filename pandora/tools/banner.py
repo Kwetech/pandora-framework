@@ -54,7 +54,7 @@ ban3 = """
 """
 import random
 def banner():
-    banners = (main_ban, ban1 ,bani2 ,ban3)
+    banners = (main_ban, ban1 ,ban2 ,ban3)
     choice = random.choice(banners)
     print(choice)
 
