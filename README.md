@@ -6,7 +6,7 @@ This is a framework basically for **Turmux** which consist of various tools need
  _The world simplest yet powerful tool_
 
 ## Goal
-Pandora developers seek to make this tool a very powerful tool for penetrating testing.And to make it available for multiple platform.It works on termux.Tell us if it works on other platforms too,and if it do not,tell us the errors.
+Pandora developers seek to make this tool a very powerful tool for penetrating testing, digital forensics etc,and to make it available for multiple platform, since works only on termux.Tell us if it works on other platforms too,and if it does not,tell us the errors so we fix them in upcoming updates.
 
 ## Message to contributors
 Contributors are welcome whether you code in python or not,if you don't code in python you can always share ideas or suggestion.
