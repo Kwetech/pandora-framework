@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 from tools.banner import *
 from tools.get_ip import *
 from tools.help import *
@@ -15,7 +15,7 @@ from tools.hashed import *
 main_banner()
 while True:
     try:
-        pan = raw_input('\33[1mpan<( ')
+        pan = input('\33[1mpan<( ')
         pan = pan.split()
         
         if pan[0] == 'use':
@@ -48,11 +48,11 @@ while True:
                 hasher()
             
             else:
-                print '\33[91;1m[-]invalid argument for command\33[00m(\33[92;1muse\33[00m).'
+                print('\33[91;1m[-]invalid argument for command\33[00m(\33[92;1muse\33[00m).')
 
 
         elif 'exit' in pan:
-            print 'Exiting.... '
+            print('Exiting.... ')
             time.sleep(1.5)
             break
         
@@ -68,7 +68,7 @@ while True:
         elif 'version' in pan:
             version()
         else:
-            '\33[91;1m[?]Unknown command\33[00m'
+            print('\33[91;1m[?]Unknown command\33[00m(\33[92;1m{}\33[00m)'.format(''.join(pan)))
 
     except:
         pass

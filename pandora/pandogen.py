@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 import os, sys, subprocess
 from time import sleep
 from optparse import OptionParser
@@ -30,7 +30,7 @@ if host == None or port == None or output == None:
     parser.print_help()
 
 else:
-    print "\n[+] HOST   : %s\n[+] PORT   : %s\n[+] OUTPUT : %s\n"%(host, port,output+add)
+    print("\n[+] HOST   : %s\n[+] PORT   : %s\n[+] OUTPUT : %s\n"%(host, port,output+add))
     print("\33[94;1m[+] Generating Payload . . .\33[00m")
     sleep(3)
     os.system("sh ~/pandora-framework/pandora/modules/gen.sh "+host+" "+str(port)+" "+output+add)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 import os
 import time
 
@@ -15,10 +15,10 @@ os.system('ln -s ~/pandora-framework/pandora/pandogen.py Pandogen')
 print('\33[92;1mInstalling neccessary packages\33[00m')
 os.system('pkg update')
 os.system('pkg upgrade')
-os.system('pkg install python2')
+os.system('pkg install python')
 print('\33[93;1mInstaling requirements\33[00m')
 time.sleep(2)
-os.system('pip2 install -r requirements.txt')
+os.system('pip install -r requirements.txt')
 print('Installation of packages:\33[92;1m  done\33[00m')
 print('Successfully installed\33[91;1m Pandora\33[00m')
 print('Finishing up...... ')

