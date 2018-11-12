@@ -2,7 +2,7 @@
 import os, sys, subprocess
 from time import sleep
 from optparse import OptionParser
-parser = OptionParser(usage="./Pandogen --host=thost --port=tport --path=destination\n")
+parser = OptionParser(usage="./Pandogen <var=value> \nexample: ./Pandogen --host=<host> --port=<port> --path=<path>")
 
 parser.add_option("--host", type="string", dest="tghost", help="Specify target host")
 
@@ -27,7 +27,7 @@ if not output.endswith(".py"):
 
 if host == None or port == None or output == None:
 
-    print parser.print_help()
+    parser.print_help()
 
 else:
     print "\n[+] HOST   : %s\n[+] PORT   : %s\n[+] OUTPUT : %s\n"%(host, port,output+add)
