@@ -11,6 +11,8 @@ port_scanner      -+-     checks open ports in range
 listener          -+-     listen for connections
 subdomain_finder  -+-     find subdomains of a domain
 ddos              -+-     perform a ddos attack
+file_reader       -+-     Reads contents in a file
+
 
 Usage: use <tool>
 
@@ -25,5 +27,6 @@ other commands
 clear        -     clear screen
 version      -     to check Pandora version
 banner       -     display a banner
+restart      -     restart Pandora console
     ''')
     

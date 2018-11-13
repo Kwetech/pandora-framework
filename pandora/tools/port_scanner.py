@@ -5,7 +5,7 @@ from datetime import datetime
 import time
     
 def port_scanner():
-    using = "\33[91;1musing\33[00m(\33[92;1mport_scanner\33[00m) "
+    using = "\33[91musing\33[00m(\33[92;1mport_scanner\33[00m) "
     try:
         host = input(using + 'host<( ')
 
@@ -18,7 +18,7 @@ def port_scanner():
             sockt = socket.socket()
             results = sockt.connect_ex((ip, port))
             if results == 0:
-                 print("Port {}    =>    \33[92;1mOpen\33[00m".format(port))
+                 print("Port {}    =>    \33[92mOpen\33[00m".format(port))
                  sockt.close()
     except:
         print('[-]Error occured')

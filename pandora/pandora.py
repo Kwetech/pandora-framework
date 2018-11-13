@@ -11,11 +11,12 @@ from tools.whois import *
 from tools.subdomain_finder import *
 from tools.ddos import *
 from tools.hashed import *
+from tools.file_reader import *
 
 main_banner()
 while True:
     try:
-        pan = input('\33[1mpan<( ')
+        pan = input('pan<( ')
         pan = pan.split()
         
         if pan[0] == 'use':
@@ -46,14 +47,23 @@ while True:
 
             elif pan[1] == 'hasher':
                 hasher()
+
+            elif pan[1] == 'file_reader':
+                f_reader()
             
             else:
-                print('\33[91;1m[-]invalid argument for command\33[00m(\33[92;1muse\33[00m).')
+                print('\33[91m[-]invalid argument for command\33[00m(\33[92;1muse\33[00m)')
 
 
         elif 'exit' in pan:
             print('Exiting.... ')
             time.sleep(1.5)
+            break
+
+        elif pan[0] in ('restart', 'refresh'):
+            print('Restarting terminal...')
+            time.sleep(3)
+            os.system('./Pandora')
             break
         
         elif 'banner' in pan:
@@ -68,7 +78,7 @@ while True:
         elif 'version' in pan:
             version()
         else:
-            print('\33[91;1m[?]Unknown command\33[00m(\33[92;1m{}\33[00m)'.format(''.join(pan)))
+            print('\33[91m[?]Unknown command\33[00m(\33[92;1m{}\33[00m)'.format(pan[0]))
 
     except:
         pass

