@@ -22,24 +22,27 @@ Add suggestions or ideas here to improve *Pandora*
 clone the repository from github:
 
 ```
-git clone https://github.com/OxfordSecurity/pandora-framework.git
+$ apt-get install git
+
+$ git clone https://github.com/OxfordSecurity/pandora-framework.git
 ```
 
 After that **Follow the following commands one by one**
 ```
-cd pandora-framework
+$ cd pandora-framework
 
-chmod +x *
+$ chmod +x *
 
-pip2 install -r requirements.txt
+#no need to run requirements.txt
+#they will be installed in the process
 
-./install.py
+$ ./install.py
 
-ls
+$ ls
 ```
 You will will see two executive files **_Pandogen_** and **_Pandora_**.Run the program by typing:
 ```
-./Pandora
+$ ./Pandora
 
 ```
 Congratulation you are using pandora.
