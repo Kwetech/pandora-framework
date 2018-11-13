@@ -3,6 +3,7 @@
 This is a framework basically for **Turmux** which consist of various tools needed in **Penetrating Testing**.This framework is simple to use and user friendly which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command.
 # Screenshot
  ![Screenshot](screenshot.png)
+
  _The world simplest yet powerful tool_
 
 ## Goal
@@ -10,7 +11,7 @@ Pandora developers seek to make this tool a very powerful tool for penetrating t
 
 ## Message to contributors
 Contributors are welcome whether you code in python or not,if you don't code in python you can always share ideas or suggestion.
- And all contributors must join the whatsapp group chat to discuss the project.[whatsapp chat](https://chat.whatsapp.com/HseBYZRyFKR4or9cAg2zC8)
+And all contributors can join the whatsapp group chat to discuss the project.[whatsapp chat](https://chat.whatsapp.com/HseBYZRyFKR4or9cAg2zC8)
 
 ## Suggestions
 Add suggestions or ideas here to improve *Pandora*
