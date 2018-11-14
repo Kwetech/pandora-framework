@@ -12,6 +12,7 @@ from tools.subdomain_finder import *
 from tools.ddos import *
 from tools.hashed import *
 from tools.file_reader import *
+from tools.tools_help import *
 
 main_banner()
 while True:
@@ -73,7 +74,10 @@ while True:
             os.system('clear')
 
         elif 'help' in pan:
-            help()
+            if len(pan) == 1:
+                help()
+            elif len(pan) == 2:
+                helper(pan[1])
 
         elif 'version' in pan:
             version()

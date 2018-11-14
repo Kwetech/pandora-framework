@@ -33,7 +33,6 @@ def attack():
     except:
         pass
     finally:
-        dos.shutdown(socket.SHUT_RDWR)
         dos.close()
 def ddos():
     using = '\33[91musing\33[00m(\33[92;1mddos\33[00m) '

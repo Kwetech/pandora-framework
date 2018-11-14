@@ -12,6 +12,7 @@ listener          -+-     listen for connections
 subdomain_finder  -+-     find subdomains of a domain
 ddos              -+-     perform a ddos attack
 file_reader       -+-     Reads contents in a file
+hasher            -+-     used to crack. md5 hash
 
 
 Usage: use <tool>
@@ -28,5 +29,6 @@ clear        -     clear screen
 version      -     to check Pandora version
 banner       -     display a banner
 restart      -     restart Pandora console
+help <tool>  -     get help on a tool
     ''')
     
