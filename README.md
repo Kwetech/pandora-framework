@@ -1,6 +1,6 @@
 # The Pandora Framework
 
-This is a framework basically for **Turmux** which consist of various tools needed in **Penetrating Testing**.This framework is simple to use and user friendly which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command.
+This is a framework basically for **Termux** which consist of various tools needed in **Penetrating Testing**.This framework is simple to use and user friendly which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command.
 # Screenshot
  ![Screenshot](screenshot.png)
 
