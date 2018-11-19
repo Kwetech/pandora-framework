@@ -29,17 +29,17 @@ def ddos_help():
     ---+Description
     Used to perform a ddos attack on a website,
     it sends lot of packets to target website to
-    slow it down or maybe crash weak website.
+    slow it down or maybe crash weak websites.
 
     ---+Usage
 
     type: \33[92;3muse ddos\33[00m in the Pandora prompt \33[1mpan<(\33[00m
     type:
-     1->the adress of target webiste(e.g ip)
-     2->the port to connect to (Rec. 80)
-     3->the number of rewuests(Rec 100000+)
+    1->the address of target webiste(e.g ip)
+    2->the port to connect to (Rec. 80)
+    3->the number of rewuests(Rec 100000+)
      
-     Hit enter then wait for pandora to do the
+    Hit enter then wait for pandora to do the
      rest
    """)
 
@@ -71,7 +71,7 @@ def ip_help():
 
     ---+Usage
     type: \33[92;3muse ip\33[00m in the Pandora prompt \33[1mpan<( \33[00m
-    type the address ypu want to conver to 
+    type the address you want to convert to 
     IPv4 address.
     Hit enter then wait for pandora to do th rest
 
@@ -89,11 +89,19 @@ def hasher_help():
     It is used to encrypt password to md5 haah
     and also used to decrypt or crack md5 haahed 
     text or password.
+    Supported hashes
+
+    -md5 algorithm
+    -sha1 algorithm
+    -sha224 algorithm
+    -sha256 algorithm
+    -sha384 algorithm
+    -sha512 algorithm
 
 
     ---+Usage
     type: \33[92;3muse hasher\33[00m in the Pandora prompt \33[1mpan<( \33[00m
-    you will be promted which should look
+    you will be prompted which should look
     something like this \33[93;3mencrypt or decrypt?\33[00m
     choose 1 by typing encrypt or 1 or e to encrypt
     text to md5 or type decrypt or 2 or d to decrypt
@@ -102,9 +110,9 @@ def hasher_help():
     \33[94;4mEncrypt\33[00m
     To erncrypt type the text that you want to 
     encrypt
-    then hit enter you should see see another 
+    then hit enter you should see another 
     text under
-    the promp,that is the hashed text.
+    the prompt,that is the hashed text.
     example \33[93;3mhello\33[00m
     5d41402abc4...   
 
@@ -113,6 +121,7 @@ def hasher_help():
     1->paste the hashed text onto the prompt
     2->choose 1 file from the altanatives filenames
     given type it and hit enter.
+    Pandora will automatically detect hash type
     wait for Pandora to search the file for a word
     that matches the hashed text.
     if it outputs password not found repeat the 
@@ -127,13 +136,13 @@ def listener_help():
 
     ---+Description
     It is used to listen to incoming connection from
-    host.
+    clients.
 
     ---+Usage
     type: \33[92;3muse listener\33[00m in the Pandora prompt \33[1mpan<( \33[00m
     1->type the ip address
     2->type the port you want to listen to
-    Remember port numbet should be the same as
+    Remember port number should be the same as
     the one in payload
     press enter then wait for connrctions from
     clients.After this you can execute shell
@@ -181,10 +190,10 @@ def port_scanner_help():
 
 
     ---+Usage
-    type: \33[92;3muse port_scanner\33[00m in the Pandora prompt \33[1mpan<( \33[00m
+    type:\33[92;3muse port_scanner\33[00m in the Pandora prompt \33[1mpan<( \33[00m
     1->type the ip or address of target
     2->type the port you want to scan from
-    3->type thw port you want to scan to
+    3->type the port you want to scan to
     Hit enter then wait for Pandora to start 
     scanning.
     example:
@@ -208,7 +217,7 @@ def port_checker_help():
     type:\33[92;3muse port_checker\33[00m in the Pandora prompt \33[1mpan<( \33[00m
     1->type the address or ip of target
     2->type the port to check
-    you can check up to five port ortype `quit` 
+    you can check up to five port or type `quit` 
     to exit.
     example:
     \33[93;3m<( example.com
