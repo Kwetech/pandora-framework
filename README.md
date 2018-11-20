@@ -27,9 +27,9 @@ $ apt-get install git
 
 $ git clone https://github.com/OxfordSecurity/pandora-framework.git
 ```
-y
+
 After that **Follow the following commands one by one**
-```y
+```
 $ cd pandora-framework
 
 $ chmod +x *

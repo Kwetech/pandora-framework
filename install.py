@@ -23,5 +23,5 @@ print('Installation of packages:\33[92;1m  done\33[00m')
 print('Successfully installed\33[91;1m Pandora\33[00m')
 print('Finishing up...... ')
 time.sleep(3)
-print('run program as \33[94;1m./Pandora\33[00m')
+print('run program as \33[94;1m./panconsole\33[00m')
 
