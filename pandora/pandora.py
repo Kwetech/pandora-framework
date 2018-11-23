@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 from modules import *
+import subprocess
 main_banner()
 while True:
     try:
@@ -47,10 +48,14 @@ while True:
             time.sleep(1.5)
             break
 
+
+        elif pan[0] == "nmap":
+            os.system(" ".join(pan))
+
         elif pan[0] in ('restart', 'refresh'):
             print('Restarting terminal...')
             time.sleep(3)
-            os.system('./Pandora')
+            os.system('./panconsole')
             break
         
         elif 'banner' in pan:
