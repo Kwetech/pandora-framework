@@ -1,6 +1,7 @@
 #imports
 import socket
 import time
+from tools.status import *
 
 #main port checking function
 def port_checker():
@@ -16,21 +17,21 @@ def port_checker():
             #getting port as input
             port = input(using + "port<( ")
             if port in ('quit', 'exit'):
-                print('exiting... ')
+                print_status('exiting... ')
                 time.sleep(1)
                 break
             results = sockt.connect_ex((ip, int(port)))
             time.sleep(1)
             if results == 0:
-                print("[+]port {} for <(\33[94m{}\33[00m)> is \33[92mopen\33[00m".format(port, host))
+                print_success("port {} for \33[94m{}\33[00m is \33[92mopen\33[00m".format(port, host))
                 count -= 1
             else:
-                print("[-]port {} for <(\33[94m{}\33[00m)> is \33[91mclosed\33[00m".format(port, host))
+                print_error("port {} for \33[94m{}\33[00m is \33[91mclosed\33[00m".format(port, host))
                 count -= 1
             if count == 0:
-                print('Exiting ...')
+                print_status('exiting ...')
                 time.sleep(1)
                 break
 
     except:
-        print("\33[93m[-]Check input\33[00m")
+        print_warning("Check input")

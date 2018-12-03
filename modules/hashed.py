@@ -1,3 +1,4 @@
+from tools.status import *
 import hashlib, os,sys
 using = '\33[91musing\33[00m(\33[92;1mhash_cracker\33[00m) '
 def decrypt():
@@ -19,7 +20,7 @@ def decrypt():
     try:
         contents = open(di + filename, 'r')
     except:
-        print('\33[91m[-]file not found\33[00m')
+        print_error('unable to find file')
         sys.exit()
     for password in contents:
         password = password.strip()
@@ -46,15 +47,15 @@ def decrypt():
 
 
         if filem is not None:
-            print('[~]trying password (\33[92m{}\33[00m) from (\33[92m{}\33[00m)'.format(password, filename))
+            print_inloop('trying password (\33[92m{}\33[00m) from (\33[92m{}\33[00m)'.format(password, filename))
             if hashtext == filem:
-                print('match found:\nPassword is <(\33[94m{}\33[00m)>'.format(password.strip()))
+                print_success('match found:\nPassword is <(\33[94m{}\33[00m)>'.format(password.strip()))
                 break
         else:
-            print('[-]Hash type not supported')
+            print_warning('Hash type not supported')
             break
     else:
-        print('\33[91;1m[-]password not found\33[00m')
+        print_error('password not found')
 def encrypt():
     text = input(using + '\33[94mencrypt\33[00m ' + 'text<( ')
     hashed = hashlib.md5(text.encode('utf-8')).hexdigest()
@@ -66,4 +67,4 @@ def hasher():
     elif types == 'encrypt' or types in ('e', 2):
         encrypt()
     else:
-        print('\33[91m[-]Invalid choice\33[00m\nSelect either \33[94;1mencrypt\33[00m or \33[94;1mdecrypt\33[00m')
+        print_warning('Invalid choice\nSelect either \33[94;1mencrypt\33[00m or \33[94;1mdecrypt\33[00m')

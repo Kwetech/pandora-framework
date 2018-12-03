@@ -1,5 +1,6 @@
 import sys
 import socket
+from tools.status import *
 
 def whois():
     using = "\33[91musing\33[00m(\33[92;1mwhois\33[00m) "
@@ -22,9 +23,9 @@ def whois():
         print("\t+---------------Details---------------+")
         print(response.decode())
     except socket.error:
-        print("[!]Connection error")
+        print_warning("Connection error")
     except:
-        print("[-]Whois Lookup failed")
+        print_error("Whois Lookup failed")
 
 
         

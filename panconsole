@@ -1,18 +1,16 @@
 #!/usr/bin/env python
 from modules.imports import *
+from tools.status import *
 import subprocess
 main_banner()
 while True:
     try:
-        pan = input('pan<( ')
+        pan = input('\33[4mpan<(\33[00m ')
         pan = pan.split()
         
         if pan[0] == 'use':
 
-            if pan[1] == 'ip':
-                get_ip()
-
-            elif pan[1] == 'listener':
+            if pan[1] == 'listener':
                 listener()
 
             elif pan[1] == 'page_clonner':
@@ -36,15 +34,13 @@ while True:
             elif pan[1] == 'hasher':
                 hasher()
 
-            elif pan[1] == 'file_reader':
-                f_reader()
             
             else:
-                print('\33[91m[-]No tool named \33[00m`\33[92m{}\33[00m`'.format(pan[1]))
+                print_warning('No tool named `\33[92m{}\33[00m`'.format(pan[1]))
 
 
         elif 'exit' in pan:
-            print('Exiting.... ')
+            print_status('Exiting.... ')
             time.sleep(1.5)
             break
 
@@ -52,13 +48,20 @@ while True:
         elif pan[0] == "nmap":
             os.system(" ".join(pan))
 
+        elif pan[0] == "ip":
+            ip(pan[1])
+
+        elif pan[0] == "read":
+            f_reader(pan[1])
+
         elif pan[0] in ('restart', 'refresh'):
-            print('Restarting terminal...')
+            print_status('Restarting terminal...')
             time.sleep(3)
             os.system('./panconsole')
             break
         
         elif 'banner' in pan:
+            os.system("clear")
             banner()
 
         elif 'clear' in pan:
@@ -74,7 +77,7 @@ while True:
         elif 'version' in pan:
             version()
         else:
-            print('\33[91m[?]Unknown command\33[00m `\33[92m{}\33[00m`'.format(pan[0]))
+            print_warning('Unknown command `\33[92m{}\33[00m`'.format(pan[0]))
 
     except:
         pass

@@ -1,34 +1,36 @@
 def help():
     print('''
 
-Tool                      Discriptions
+Tool                      Descriptions
 +-----------------------------------------+
 whois             -+-     get info of domain
 port_checker      -+-     checking ports in singles
-ip                -+-     retrieve ipaddress of host
 page_clonner      -+-     used to clone webpages
 port_scanner      -+-     checks open ports in range
 listener          -+-     listen for connections
 subdomain_finder  -+-     find subdomains of a domain
 ddos              -+-     perform a ddos attack
-file_reader       -+-     Reads contents in a file
-hasher            -+-     used to crack. md5 hash
+hasher            -+-     used to crack hash
 
 
 Usage: use <tool>
 
-command                    Description
+Command                    Description
 +-----------------------------------------+
 use               -+-      To use a tool
 exit              -+-      to exit an activity
+clear             -+-      clear screen
+version           -+-      to check version
+banner            -+-      display a banner
+restart           -+-      restart pandora console
 
 
-other commands
+
+Other tools         Description
 +-----------------------------------------+
-clear        -     clear screen
-version      -     to check Pandora version
-banner       -     display a banner
-restart      -     restart Pandora console
 help <tool>  -     get help on a tool
+ip <host>    -     get ip of host
+read <file>  -     read from a file
+nmap <args>  -     use the nmap tool
     ''')
     

@@ -1,3 +1,4 @@
+from tools.status import *
 import socket
 import sys
 import os
@@ -15,6 +16,7 @@ def port_scanner():
         e_port = input(using + 'end_port<( ')
 
         ip = socket.gethostbyname(host)
+        
         for port in range(int(s_port) ,int(e_port)+1):  
             sockt = socket.socket()
             results = sockt.connect_ex((ip, port))
@@ -23,8 +25,8 @@ def port_scanner():
                  sockt.close()
         tm2 = datetime.now()
         tmcmp = tm2 - tm1
-        print("[>]Scanning completed in:", tmcmp)
+        print_msg("Scanning completed in:" + str(tmcmp))
     except:
-        print('[-]Error occured')
-        print('exiting.... ')
-        time.sleep(1)
+        print_error('Error occured')
+        print_status('exiting.... ')
+        time.sleep(3)

@@ -1,4 +1,5 @@
 #necessary imports
+from tools.status import *
 import requests
 import time
 import os
@@ -15,13 +16,13 @@ def clone_page(url):
         urli = 'http://' + url
     try:
         #try to read url or page
-        print('[*]clonning \33[94m{}\33[00m'.format(urli))
+        print_status('clonning \33[94m{}\33[00m'.format(urli))
         cont = requests.get(urli)
         check = True
-        print('[+]page successfully cloned')
+        print_success('page successfully cloned')
         return cont.text
     except:
-        print('\33[91m[-]Error could not find page\33[00m')
+        print_error('Could not find page')
         check = False
         return 0
 
@@ -41,8 +42,8 @@ def save_file(contents, file_name):
         f = open(di+'/saves/'+file_name,'w+')
     
         f.write(contents)
-        print('[+]page successfully saved')
-        print("[>]file saved to '{}'".format('~/pandora-framework/saves/' + file_name))
+        print_success('Page successfully saved')
+        print_msg("file saved to '{}'".format('~/pandora-framework/saves/' + file_name))
     else:
         pass
 

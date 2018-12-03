@@ -17,16 +17,16 @@ def socketCreate():
             socketCreate()
 
     except:
-        print('Error occurred')
+        print_error('Error occurred')
 
 def socketBind():
     try:
-        print('[*]Listening on port ' + str(port))
+        print_status('Listening on port ' + str(port))
         s.bind((host,port))
         s.listen(1)
     except:
-        print('[-]binding error')
-        print('[^]trying')
+        print_error('binding error')
+        print('retrying..')
         time.sleep(3)
         socketBind()
 
@@ -37,10 +37,10 @@ def socketAccept():
 
     try:
         conn, addr = s.accept()
-        print('[+] Sessions Opened | ' + 'IP :\33[92m ' + addr[0] + '\33[00m | Port : \33[92m' + str(addr[1])+'\33[00m\n')
+        print_success('Sessions Opened | ' + 'IP :\33[92m ' + addr[0] + '\33[00m | Port : \33[92m' + str(addr[1])+'\33[00m\n')
         
     except:
-        print('[-]Failed to accept connections ')
+        print_error('Failed to accept connections ')
 
 def menu():
     while True:

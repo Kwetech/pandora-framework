@@ -1,3 +1,4 @@
+from tools.status import *
 def whois_help():
     print("""
     Tool Name: Whois Lookup
@@ -42,44 +43,6 @@ def ddos_help():
     Hit enter then wait for pandora to do the
      rest
    """)
-
-
-def file_reader_help():
-    print("""
-    Tool Name: File Reader
-
-    ---+Description
-    Used to read data from a file
-
-
-    ---+Usage
-    
-     type: \33[92;3muse ddos\33[00m in the Pandora prompt \33[1mpan<( \33[00m
-     type the name of the file you want to read
-     the contents at the prompt \33[93;3mfile_name<( \33[00m
-     then pandora will give you its contents.
-   """)
-
-def ip_help():
-    print("""
-    Tool Name: Ip
-
-    ---+Description
-    It is used to covert addresses to an IPv4
-    address..
-
-
-    ---+Usage
-    type: \33[92;3muse ip\33[00m in the Pandora prompt \33[1mpan<( \33[00m
-    type the address you want to convert to 
-    IPv4 address.
-    Hit enter then wait for pandora to do th rest
-
-    example:\33[93;3mexample.com\33[00m
-        
-   """)
-
-
 
 def hasher_help():
     print("""
@@ -255,17 +218,11 @@ def helper(tool):
     elif tool == "ddos":
         ddos_help()
 
-    elif tool == "file_reader":
-        file_reader_help()
-
     elif tool == "hasher":
         hasher_help()
 
     elif tool == "subdomain_finder":
         subdomain_finder_help()
-
-    elif tool == "ip":
-        ip_help()
 
     elif tool == "port_scanner":
         port_scanner_help()
@@ -280,4 +237,4 @@ def helper(tool):
         page_clonner_help()
 
     else:
-        print("[-]tool not found")
+        print_warning("tool not found")

