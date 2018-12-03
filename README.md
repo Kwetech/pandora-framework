@@ -32,12 +32,11 @@ After that **Follow the following commands one by one**
 ```
 $ cd pandora-framework
 
-$ chmod +x *
 
 #no need to run requirements.txt
 #they will be installed in the process
 
-$ ./install.py
+$ ./install
 
 $ ls
 ```
