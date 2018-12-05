@@ -44,14 +44,13 @@ def ddos_help():
      rest
    """)
 
-def hasher_help():
+def hash_cracker_help():
     print("""
-    Tool Name: Hasher
+    Tool Name: Hasher Cracker
 
     ---+Description
-    It is used to encrypt password to md5 haah
-    and also used to decrypt or crack md5 haahed 
-    text or password.
+    It is used to decrypt or crack hashhed to 
+    plain text.
     Supported hashes
 
     -md5 algorithm
@@ -62,23 +61,8 @@ def hasher_help():
     -sha512 algorithm
 
 
-    ---+Usage
-    type: \33[92;3muse hasher\33[00m in the Pandora prompt \33[1mpan<( \33[00m
-    you will be prompted which should look
-    something like this \33[93;3mencrypt or decrypt?\33[00m
-    choose 1 by typing encrypt or 1 or e to encrypt
-    text to md5 or type decrypt or 2 or d to decrypt
-    text from md5.
+    ---+Usage.
     
-    \33[94;4mEncrypt\33[00m
-    To erncrypt type the text that you want to 
-    encrypt
-    then hit enter you should see another 
-    text under
-    the prompt,that is the hashed text.
-    example \33[93;3mhello\33[00m
-    5d41402abc4...   
-
     \33[94;4mDecrypt\33[00m
     To decrypt follow the steps:
     1->paste the hashed text onto the prompt
@@ -218,7 +202,7 @@ def helper(tool):
     elif tool == "ddos":
         ddos_help()
 
-    elif tool == "hasher":
+    elif tool == "hash_cracker":
         hasher_help()
 
     elif tool == "subdomain_finder":

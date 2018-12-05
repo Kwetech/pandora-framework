@@ -1,5 +1,6 @@
 from modules.ddos import *
 from tools.banner import *
+from tools.text_to_hash import *
 from tools.file_reader import *
 from tools.ip import *
 from modules.hashed import *

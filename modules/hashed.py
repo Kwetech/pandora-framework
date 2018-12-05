@@ -2,7 +2,7 @@ from tools.status import *
 import hashlib, os,sys
 using = '\33[91musing\33[00m(\33[92;1mhash_cracker\33[00m) '
 def decrypt():
-    hashtext = input(using + '\33[94mdecrypt\33[00m ' + 'hashtext<( ')
+    hashtext = input(using + 'hashtext<( ')
     print('''Alternative wordlist files:
     password1.txt
     password2.txt
@@ -26,7 +26,7 @@ def decrypt():
         password = password.strip()
         if len(hashtext) == 32:
             filem = hashlib.md5(password.encode('utf-8')).hexdigest()
-
+            
         elif len(hashtext) == 40:
             filem = hashlib.sha1(password.encode('utf-8')).hexdigest()
 
@@ -56,15 +56,3 @@ def decrypt():
             break
     else:
         print_error('password not found')
-def encrypt():
-    text = input(using + '\33[94mencrypt\33[00m ' + 'text<( ')
-    hashed = hashlib.md5(text.encode('utf-8')).hexdigest()
-    print(hashed)
-def hasher():
-    types = input(using  + '(\33[94mencrypt\33[00m or \33[94mdecrypt\33[00m?)<( ')
-    if types == 'decrypt' or types in ('d', 1):
-        decrypt()
-    elif types == 'encrypt' or types in ('e', 2):
-        encrypt()
-    else:
-        print_warning('Invalid choice\nSelect either \33[94;1mencrypt\33[00m or \33[94;1mdecrypt\33[00m')

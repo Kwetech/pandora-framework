@@ -31,8 +31,8 @@ while True:
             elif pan[1] == 'ddos':
                 ddos()
 
-            elif pan[1] == 'hasher':
-                hasher()
+            elif pan[1] == 'hash_cracker':
+                decrypt()
 
             
             else:
@@ -43,6 +43,9 @@ while True:
             print_status('Exiting.... ')
             time.sleep(1.5)
             break
+
+        elif pan[0] == "hash":
+            encrypt(pan[1], pan[2])
 
 
         elif pan[0] == "nmap":

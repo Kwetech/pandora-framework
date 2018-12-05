@@ -10,7 +10,7 @@ port_scanner      -+-     checks open ports in range
 listener          -+-     listen for connections
 subdomain_finder  -+-     find subdomains of a domain
 ddos              -+-     perform a ddos attack
-hasher            -+-     used to crack hash
+hash_cracker      -+-     used to crack hash
 
 
 Usage: use <tool>
@@ -28,9 +28,10 @@ restart           -+-      restart pandora console
 
 Other tools         Description
 +-----------------------------------------+
-help <tool>  -     get help on a tool
-ip <host>    -     get ip of host
-read <file>  -     read from a file
-nmap <args>  -     use the nmap tool
+help <tool>          -     get help on a tool
+ip <host>            -     get ip of host
+read <file>          -     read from a file
+nmap <args>          -   use the nmap tool
+hash <type> (value)  -   use to hash plain text
     ''')
     
