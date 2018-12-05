@@ -14,4 +14,4 @@ def print_inloop(msg):
     print("\33[94m[~]\33[00m" + msg)
 
 def print_msg(msg):
-    print("\33[92m[>]\33[00m" + msg)
+    print("\33[94m[>]\33[00m" + msg)
