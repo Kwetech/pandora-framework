@@ -1,13 +1,24 @@
 from tools.status import *
 import socket
+import requests
 
-def ip(host):
-    print_status("checking host \33[94m{}\33[00m...".format(host))
-    try:
-        ip = socket.gethostbyname(host)
-        print_success("ip for host is {}".format(ip))
+def ip(command):
+    print_status("retrieving ip.....")
+    if command == "myip":
+        try:
+            req = requests.get(r'http://jsonip.com')
+            ip = req.json()['ip']
+            print_msg("ip is {}".format(ip))
+        except:
+            print_error("could not retrieve ip")
 
-    except:
-        print_error("an error occured.Try again.")
-        
-        
+    elif command == "":
+        print_warning("please specify host")
+
+    else:
+        try:
+            ip = socket.gethostbyname(command)
+            print_msg("ip is {}".format(ip))
+        except:
+            print_error("could not retrieve ip")
+

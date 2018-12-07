@@ -45,7 +45,10 @@ while True:
             break
 
         elif pan[0] == "hash":
-            encrypt(pan[1], pan[2])
+            if len(pan) < 3:
+                print_warning("hash could not be generated")
+            else:
+                encrypt(pan[1], pan[2])
 
 
         elif pan[0] == "nmap":

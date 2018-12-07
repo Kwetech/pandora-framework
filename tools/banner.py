@@ -7,9 +7,9 @@ main_ban =  '''
     |_|   \__,_|_| |_|\__,_|\___/|_|  \__,_|
                                             \33[00m \33[93;1m
     )------------------+-------------------(\33[00m\33[94;1m
-      main Developer   :     OxfordSecurity
-      Version          :     <v0.1.5-beta>
-      type             :     Community\33[00m\33[93;1m
+      Main Developer   :     OxfordSecurity
+      Version          :     v0.1.5-beta
+      Type             :     Community\33[00m\33[93;1m
      |------------------------------------|\33[00m
     
     '''
