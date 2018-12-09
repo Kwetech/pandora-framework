@@ -1,2 +1,5 @@
 tld
 requests
+bs4
+html5lib
+
