@@ -1,6 +1,6 @@
 from tools.status import *
 import hashlib, os,sys
-using = '\33[91musing\33[00m(\33[92;1mhash_cracker\33[00m) '
+using = '\33[91musing\33[00m(\33[94mhash_cracker\33[00m) '
 def decrypt():
     hashtext = input(using + 'hashtext<( ')
     print('''Alternative wordlist files:
@@ -15,7 +15,7 @@ def decrypt():
     mnames.txt
     fnames.txt
     ''')
-    filename = input(using + '\33[94mdecrypt\33[00m ' + 'filename<( ')
+    filename = input(using + 'filename<( ')
     di = 'passfold/'
     try:
         contents = open(di + filename, 'r')

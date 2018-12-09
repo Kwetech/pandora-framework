@@ -11,7 +11,7 @@ def socketCreate():
         global s
 
         s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        using = '\33[91musing\33[00m(\33[92;1mlistener\33[00m) '
+        using = '\33[91musing\33[00m(\33[94mlistener\33[00m) '
         host = input(using + 'host<( ')
         port = int(input(using + 'port<( '))
         if port == '':

@@ -11,12 +11,16 @@ listener          -+-     listen for connections
 subdomain_finder  -+-     find subdomains of a domain
 ddos              -+-     perform a ddos attack
 hash_cracker      -+-     used to crack hash
+file_downloader   -+-     download website files
+
 
 
 Usage: use <tool>
 
 Command                    Description
 +-----------------------------------------+
+help              -+-      display help menu
+help <tool>       -+-      get help on a tool
 use               -+-      To use a tool
 exit              -+-      to exit an activity
 clear             -+-      clear screen
@@ -26,12 +30,11 @@ restart           -+-      restart pandora console
 
 
 
-Other tools         Description
+Other tools                Description
 +-----------------------------------------+
-help <tool>          -     get help on a tool
 ip <host>            -     get ip of host
 read <file>          -     read from a file
-nmap <args>          -   use the nmap tool
-hash <type> (value)  -   use to hash plain text
+nmap <args>          -     use the nmap tool
+hash <type> (value)  -     use to hash plain text
     ''')
     

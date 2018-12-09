@@ -1,4 +1,5 @@
 from modules.ddos import *
+from modules.file_downloader import *
 from tools.banner import *
 from tools.text_to_hash import *
 from tools.file_reader import *

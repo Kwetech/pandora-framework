@@ -8,7 +8,7 @@ main_ban =  '''
                                             \33[00m \33[93;1m
     )------------------+-------------------(\33[00m\33[94;1m
       Main Developer   :     OxfordSecurity
-      Version          :     v0.1.5-beta
+      Version          :     v0.1.8-beta
       Type             :     Community\33[00m\33[93;1m
      |------------------------------------|\33[00m
     

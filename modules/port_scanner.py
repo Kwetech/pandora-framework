@@ -7,7 +7,7 @@ import time
 
 
 def port_scanner():
-    using = "\33[91musing\33[00m(\33[92;1mport_scanner\33[00m) "
+    using = "\33[91musing\33[00m(\33[94mport_scanner\33[00m) "
     try:
         host = input(using + 'host<( ')
 

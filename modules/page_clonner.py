@@ -49,7 +49,7 @@ def save_file(contents, file_name):
 
 #method to start clonning
 def start_clonner():
-    using = "\33[91musing\33[00m(\33[92;1mpage_clonner\33[00m) "
+    using = "\33[91musing\33[00m(\33[94mpage_clonner\33[00m) "
     url = input(using + "url<( ")
     contents = clone_page(url)
     if check == True:

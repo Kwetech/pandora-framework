@@ -12,7 +12,7 @@ def ip(command):
         except:
             print_error("could not retrieve ip")
 
-    elif command == "":
+    elif command == "" or command == None:
         print_warning("please specify host")
 
     else:

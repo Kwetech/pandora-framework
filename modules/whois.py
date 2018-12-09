@@ -3,7 +3,7 @@ import socket
 from tools.status import *
 
 def whois():
-    using = "\33[91musing\33[00m(\33[92;1mwhois\33[00m) "
+    using = "\33[91musing\33[00m(\33[94mwhois\33[00m) "
     host = input(using + "host<( ")
     try:
         ip = socket.gethostbyname(host)

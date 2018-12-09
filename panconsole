@@ -34,6 +34,9 @@ while True:
             elif pan[1] == 'hash_cracker':
                 decrypt()
 
+            elif pan[1] == 'file_downloader':
+                starter()
+
             
             else:
                 print_warning('No tool named `\33[92m{}\33[00m`'.format(pan[1]))
@@ -67,7 +70,6 @@ while True:
             break
         
         elif 'banner' in pan:
-            os.system("clear")
             banner()
 
         elif 'clear' in pan:

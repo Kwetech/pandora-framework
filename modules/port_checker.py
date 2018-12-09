@@ -5,7 +5,7 @@ from tools.status import *
 
 #main port checking function
 def port_checker():
-    using = "\33[91musing\33[00m(\33[92;1mport_checker\33[00m) "
+    using = "\33[91musing\33[00m(\33[94mport_checker\33[00m) "
     count = 5
     #getting host as input
     host = input(using + "host<( ")
