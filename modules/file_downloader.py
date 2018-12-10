@@ -9,34 +9,25 @@ def download(link):
 
     print_status("downloading {}".format(filename))
 
-    r = requests.get(link, stream=True)
+    try:
+
+        r = requests.get(link, stream=True)
         
-    with open('saves/' + filename, "wb") as f:
-        for chunk in r.iter_content(chunk_size = 1024 * 1024):
-            if chunk:
-                f.write(chunk)
+        with open('saves/' + filename, "wb") as f:
+            for chunk in r.iter_content(chunk_size = 1024 * 1024):
+                if chunk:
+                    f.write(chunk)
+    except:
+        print_warning('could not download')
 
     print_msg("{} downloaded to /saves/{}".format(filename, filename))
 
-def parse_url(url):
-    if url.startswith('https://'):
-        url.replace('https://', 'http://')
-    if url.startswith("www"):
-        url = 'http://' + url
-    if not url.endswith('/'):
-        url += '/'
-    if not url.startswith('http://') and not url.startswith('www.'):
-        url = 'http://www.' + url
-    return url
 
 def find_links(url):
-    exts = ["pdf", "apk", "txt", "iso", "exe"
-           "png", "jpg", "mp3", "mp4", "doc"
-           ]
+    exts = ["pdf", "apk", "txt", "iso", "exe",
+           "png", "jpg", "mp3", "mp4", "doc", "py"]
 
-    tags = ["a", "img", "video", "audio"
-        
-    ]
+    tags = ["a", "img", "video", "audio", "link"]
     linkss = []
     count = 0
     r = requests.get(url)
@@ -48,14 +39,20 @@ def find_links(url):
                 for ext in exts:
                     if link['src'].endswith(ext):
                         count += 1
-                        linkss.append(url + link['src'])
+                        if link['src'].startswith('https://'):
+                            linkss.append(link['src'])
+                        else:
+                            linkss.append(url + link['src'])
 
         except:
             for link in links:
                 for ext in exts:
                     if link['href'].endswith(ext):
                         count += 1
-                        linkss.append(url + link['href'])
+                        if link['href'].startswith('https://'):
+                            linkss.append(link['href'])
+                        else:
+                            linkss.append(url + link['href'])
     if len(linkss) != 0:
         cu = 1
         print_msg("found {} downloadable files".format(count))
@@ -71,8 +68,10 @@ def find_links(url):
 def starter():
     using = "\33[91musing\33[00m(\33[94mfile_downloader\33[00m) "
     url = input(using + 'url<( ')
-    url = parse_url(url)
-    links = find_links(url)
+    try:
+        links = find_links(url)
+    except:
+        print_warning("invalid url")
     while len(links) != 0:
         dowl = input('command<( ')
         dowl = dowl.split()
@@ -94,7 +93,10 @@ def starter():
                         download(link)
 
             elif dowl[0] == "download":
-                download(links[int(dowl[1]) - 1])
+                try:
+                    download(links[int(dowl[1]) - 1])
+                except:
+                    print_error('doesnt exist')
 
             else:
                 print_warning("unknown command")
