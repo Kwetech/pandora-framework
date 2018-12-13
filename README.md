@@ -17,7 +17,7 @@ And all contributors can join the whatsapp group chat to discuss the project.[wh
 Add suggestions or ideas here to improve *Pandora*
 
 ## Pandorers
-**Pandorers** are the developers or peoples or individuals that writes their own tools then adds them to **Pandora Framework** for other people to use.pandorers can add as many tools as they want without limitations.A pandorer can be anyone, an _individuals_,_community_ etc.These tools that are built by Pandorers wiil be further developed by other Pandorers or the same Panforers to help make the tool a better one.
+**Pandorers** are the developers or peoples or individuals that writes their own tools then adds them to **Pandora Framework** for other people to use.pandorers can add as many tools as they want without limitations.A pandorer can be anyone, an _individuals_,_community_ etc.These tools that are built by Pandorers wiil be further developed by other Pandorers or the same Panforer to help make the tool a better one.
 
 
 # Installation
