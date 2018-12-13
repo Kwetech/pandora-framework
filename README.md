@@ -1,6 +1,6 @@
 # The Pandora Framework
 
-This is a framework basically for **Termux** which consist of various tools needed in **Penetrating Testing**.This framework is simple to use and user friendly which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command.
+This is a framework basically for **Termux** which consist of tools built by developers called **Pandorers**,these tools can help in **Penetrating Testing**.This framework is simple to use and user friendly which means *it gives specific instructions on what to do when prompted* ,it does not require users to type a longer command.
 # Screenshot
  ![Screenshot](screenshot.png)
 
@@ -16,6 +16,8 @@ And all contributors can join the whatsapp group chat to discuss the project.[wh
 ## Suggestions
 Add suggestions or ideas here to improve *Pandora*
 
+## Pandorers
+**Pandorers** are the developers or peoples or individuals that writes their own tools then adds them to **Pandora Framework** for other people to use.pandorers can add as many tools as they want without limitations.A pandorer can be anyone, an _individuals_,_community_ etc.These tools that are built by Pandorers wiil be further developed by other Pandorers or the same Panforers to help make the tool a better one.
 
 
 # Installation
